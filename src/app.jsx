@@ -972,21 +972,6 @@ export function App() {
                   {definition?.zh && definition?.en && <br />}
                   {definition?.en}
                 </div>
-                <small>
-                  <a
-                    href={`https://hanyu.baidu.com/s?wd=${currentGame.idiom}&from=zici`}
-                    target="_blank"
-                  >
-                    📖 {t('glossary.baidu')}
-                  </a>
-                  &nbsp; &nbsp;
-                  <a
-                    href={`https://www.zdic.net/hans/${currentGame.idiom}`}
-                    target="_blank"
-                  >
-                    📖 {t('glossary.zdic')}
-                  </a>
-                </small>
               </p>
               <p class="block warning">{t('ui.avoidSpoilers')}</p>
               <div class="block">
@@ -1309,24 +1294,8 @@ export function App() {
                   ]}
                 />
               </p>
-              {/* <p>
-                <Trans
-                  i18nKey="about.about2"
-                  components={[
-                    <a
-                      href="https://www.buymeacoffee.com/cheeaun"
-                      target="_blank"
-                    />,
-                  ]}
-                />
-              </p> */}
               <h2>{t('feedback.heading')}</h2>
               <ul>
-                {/* <li>
-                  <a href="https://t.me/+ykuhfiImLd1kNjk1" target="_blank">
-                    {t('feedback.telegramGroup')}
-                  </a>
-                </li> */}
                 <li>
                   <Trans
                     i18nKey="feedback.githubDiscussions"
