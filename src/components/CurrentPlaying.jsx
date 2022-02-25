@@ -35,7 +35,7 @@ export default () => {
 
   return (
     <div id="current-playing">
-      {t('ui.countPlaying', { count: playingCount })}
+      {t('')}
     </div>
   );
 };

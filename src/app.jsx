@@ -47,7 +47,7 @@ window.pinyin = pinyin;
 
 const HARD_MODE = JSON.parse(LS.getItem(`${KEY_PREFIX}hardMode`) || false);
 const MAX_GAMES_BEFORE_SHOW_DASHBOARD = 5000;
-const MAX_LETTERS = 4;
+const MAX_LETTERS = 5;
 const MAX_KEYS = HARD_MODE ? 40 : 20;
 const MAX_STEPS = 6;
 const MIN_IDIOMS = HARD_MODE ? 10 : 6;
@@ -1272,19 +1272,19 @@ export function App() {
           <p>{t('howToPlay.how2')}</p>
           <p>{t('howToPlay.how3')}</p>
           <div class="example-idiom">
-            {'九牛一毛'.split('').map((letter, i) => (
+            {'豆腐火腩飯'.split('').map((letter, i) => (
               <Tile key={letter} letter={letter} state={i === 0 ? '🟩' : ''} />
             ))}
           </div>
           <p>{t('howToPlay.spotCorrect')}</p>
           <div class="example-idiom">
-            {'理所当然'.split('').map((letter, i) => (
+            {'窩蛋牛肉飯'.split('').map((letter, i) => (
               <Tile key={letter} letter={letter} state={i === 1 ? '🟧' : ''} />
             ))}
           </div>
           <p>{t('howToPlay.spotPresent')}</p>
           <div class="example-idiom">
-            {'爱不释手'.split('').map((letter, i) => (
+            {'沙嗲牛肉麵'.split('').map((letter, i) => (
               <Tile key={letter} letter={letter} state={i === 2 ? '⬜' : ''} />
             ))}
           </div>
@@ -1298,10 +1298,10 @@ export function App() {
                   i18nKey="about.about1"
                   components={[
                     <a
-                      href="https://github.com/cheeaun/chengyu-wordle/"
+                      href="https://github.com/parosk/chengyu-wordle/"
                       target="_blank"
                     />,
-                    <a href="https://cheeaun.com/projects/" target="_blank" />,
+                    <a href="https://github.com/parosk" target="_blank" />,
                     <a
                       href="https://www.nytimes.com/games/wordle/"
                       target="_blank"
@@ -1309,7 +1309,7 @@ export function App() {
                   ]}
                 />
               </p>
-              <p>
+              {/* <p>
                 <Trans
                   i18nKey="about.about2"
                   components={[
@@ -1319,20 +1319,20 @@ export function App() {
                     />,
                   ]}
                 />
-              </p>
+              </p> */}
               <h2>{t('feedback.heading')}</h2>
               <ul>
-                <li>
+                {/* <li>
                   <a href="https://t.me/+ykuhfiImLd1kNjk1" target="_blank">
                     {t('feedback.telegramGroup')}
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Trans
                     i18nKey="feedback.githubDiscussions"
                     components={[
                       <a
-                        href="https://github.com/cheeaun/chengyu-wordle/discussions"
+                        href="https://github.com/parosk/chengyu-wordle/discussions"
                         target="_blank"
                       />,
                     ]}
@@ -1343,22 +1343,22 @@ export function App() {
                     i18nKey="feedback.githubIssues"
                     components={[
                       <a
-                        href="https://github.com/cheeaun/chengyu-wordle/issues"
+                        href="https://github.com/parosk/chengyu-wordle/issues"
                         target="_blank"
                       />,
                     ]}
                   />
                 </li>
-                <li>
+                {/* <li>
                   <a href="https://twitter.com/cheeaun" target="_blank">
                     {t('feedback.twitter')}
                   </a>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <a href="https://t.me/cheeaun" target="_blank">
                     {t('feedback.telegram')}
                   </a>
-                </li>
+                </li> */}
               </ul>
               <details id="debugging-container">
                 <summary>

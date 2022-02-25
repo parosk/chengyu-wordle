@@ -1,12 +1,12 @@
 {
   "about": {
-    "about1": "<0>Built</0> by <1>Chee Aun</1>. <2>Wordle</2> © The New York Times Company.",
-    "about2": "Enjoying the game? <0>Buy me a coffee!</0>",
+    "about1": "forked by paros <0>Built</0> by <1>Chee Aun</1>. <2>Wordle</2> © The New York Times Company.",
+    "about2": "Enjoying the game? <0>Buy him a coffee!</0>",
     "heading": "About"
   },
   "app": {
-    "description": "Wordle, for Chinese idioms - 成语 (chéngyǔ). Guess the idiom in 6 tries.",
-    "title": "Chengyu Wordle"
+    "description": "Wordle, for cha chaan teng food. Guess the idiom in 6 tries.",
+    "title": "Cha Chaan Teng Wordle(forked from Chengyu wordle)"
   },
   "common": {
     "choose": "Choose",
@@ -19,7 +19,7 @@
   },
   "dashboard": {
     "heading": "Congratulations, you've made it! {{gamesCount}}+ games!",
-    "subheading": "Here you have access to ALL idiom games, including the ones you might have not played. Click on the box to play a specific idiom game.",
+    "subheading": "Here you have access to ALL games, including the ones you might have not played. Click on the box to play a specific game.",
     "totalGamesPlayed": "Total games played: <0>{{gamesCountOverTotal}}</0>",
     "wonLost": "🟩 Won: <0>{{wonCount}}</0> · 🟧 Lost: <1>{{lostCount}}</1>"
   },
@@ -28,7 +28,7 @@
     "confirmClearDB": "Are you sure?",
     "confirmResetGame": "Are you sure?",
     "heading": "Debugging",
-    "resetGame": "Reset current idiom game"
+    "resetGame": "Reset current game"
   },
   "feedback": {
     "githubDiscussions": "<0>GitHub Discussions</0> (for developers)",
@@ -49,10 +49,10 @@
   },
   "howToPlay": {
     "heading": "How to play",
-    "how1": "Guess the idiom in 6 tries.",
-    "how2": "Each guess must be a valid 4-letter idiom. Hit the enter button to submit.",
+    "how1": "Guess the food in 6 tries.",
+    "how2": "Each guess must be a valid 5-character food. Hit the enter button to submit.",
     "how3": "After each guess, the color of the tiles will change to show how close your guess was to the idiom.",
-    "how4": "A new idiom will be available every day.",
+    "how4": "A new food will be available every day.",
     "spotAbsent": "Gray = not in any spot",
     "spotCorrect": "Green = correct spot",
     "spotPresent": "Yellow = wrong spot"
