@@ -45,10 +45,10 @@ import usePageVisibility from './utils/usePageVisibility';
 const py = pinyin;
 window.pinyin = pinyin;
 
-const HARD_MODE = JSON.parse(LS.getItem(`${KEY_PREFIX}hardMode`) || false);
+const HARD_MODE = JSON.parse(LS.getItem(`${KEY_PREFIX}hardMode`) || true);
 const MAX_GAMES_BEFORE_SHOW_DASHBOARD = 5000;
 const MAX_LETTERS = 5;
-const MAX_KEYS = HARD_MODE ? 40 : 20;
+const MAX_KEYS = HARD_MODE ? 32 : 20;
 const MAX_STEPS = 6;
 const MIN_IDIOMS = HARD_MODE ? 10 : 6;
 
@@ -133,13 +133,15 @@ const importGameData = (gameData, overrides = false) => {
 };
 
 const getBoardGameState = (boardStates) => {
+  
   const won = boardStates.some(
     (row) => !!row.length && row.every((s) => s === '🟩'),
   );
   if (won) return 'won';
   const lastRow = boardStates[boardStates.length - 1];
-  const lost = lastRow.length && lastRow.every((s) => s !== '🟩');
-  if (lost) return 'lost';
+
+  const lost = !!lastRow.length && !lastRow.every((s) => s === '🟩');
+  if (lost) return 'lost'; 
   return null;
 };
 
@@ -1020,7 +1022,7 @@ export function App() {
                     class="button facebook"
                     href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
                       permalink,
-                    )}&hashtag=${encodeURIComponent('#chengyuwordle')}`}
+                    )}&hashtag=${encodeURIComponent('#cctwordle')}`}
                     target="_blank"
                     onClick={() => {
                       copy(shareTextWithLink);
